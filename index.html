@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AstroDoge</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="A nonprofit initiative">
+    <meta name="keywords" content="nonprofit, stem, coding, camp, computer, science, computer science">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="activenavbutton">
+        Home
+      </a>
+      <a href="about.html"  class="navbutton">
+        About <!--Roadmap, Whitepaper-->
+      </a>
+      <!-- <a href="team.html" class="navbutton">
+        Team
+      </a>
+      <a href="camp.html"  class="navbutton">
+        Camp
+      </a>
+      <a href="grant.html"  class="navbutton">
+        Grant
+      </a> -->
+    </nav>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <img class="logo" src="logo.png" width="200px">
+    <!-- <div class="flexrow">
+    	<div class="stat">
+		<h1>$1000+</h1>
+		<h2>in Nonprofit funds</h2>
+	</div>
+	<div class="stat">
+		<h1>200+</h1>
+		<h2>students impacted</h2>
+	</div>
+    </div> -->
+	
+    <div class="logocover">
+      <h1>This is AstroDoge</h1>
+      <p>AstroDoge is a secure, peer-to-peer cryptocurrency with a heavy emphasis on active community development. <br> <br> Our goal: to create, maintain, and develop <br>the best community in the crypto space.</p>
+    </div>
+    <br><br>
+    <div class="flexrow"><div class="socials"><a target="_blank" href="https://www.instagram.com/astrodogecrypto"><img src="instagram.png"></a><a target="_blank" href="https://www.facebook.com/AstroDoge-Crypto-102080448724402"><img src="facebook.png"></a><a target="_blank" href="https://twitter.com/AstroDogeCrypto"><img src="twitter.png"></a><a target="_blank" href="mailto:theastrodoge@gmail.com"><img src="email.png"></a></div></div>
+    <br><br>
+    <div class="flexrow">
+      <a class="button" href="about.html">Learn More</a>
+      <a class="button" href="">Buy AstroDoge Now</a>
+    </div>
+    <div class="animatron">
+      <img width="250px" src="rockie.png">
+    </div>
+    <br><br><br>
+  </body>
+  <footer>
+    <script>
+      const colors = ["#3c3744ff", "#090c9bff", "#3d52d5ff", "#b4c5e4ff", "#fbfff1ff"];
+
+      const numBalls = 50;
+      const balls = [];
+
+      for (let i = 0; i < numBalls; i++) {
+        let ball = document.createElement("div");
+        ball.classList.add("ball");
+        ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+        ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
+        ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
+        ball.style.transform = `scale(${Math.random()})`;
+        ball.style.width = `${Math.random()}em`;
+        ball.style.height = ball.style.width;
+        
+        balls.push(ball);
+        document.body.append(ball);
+      }
+
+      // Keyframes
+      balls.forEach((el, i, ra) => {
+        let to = {
+          x: Math.random() * (i % 2 === 0 ? -11 : 11),
+          y: Math.random() * 12
+        };
+
+        let anim = el.animate(
+          [
+            { transform: "translate(0, 0)" },
+            { transform: `translate(${to.x}rem, ${to.y}rem)` }
+          ],
+          {
+            duration: (Math.random() + 1) * 2000, // random duration
+            direction: "alternate",
+            fill: "both",
+            iterations: Infinity,
+            easing: "ease-in-out"
+          }
+        );
+      });
+    </script>
+    <div>Copyright 2021 AstroDoge Coin</div>
+    
+  </footer>
+</html>
